@@ -33,6 +33,6 @@ jobs:
     - name: Login into Docker Hub
       run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
     - name: Build Docker Image
-      run: docker build -t vamsibujji/springboot-cicd .
+      run: docker build -t vamsibujji/springboot-cicd spring-boot-cicd/
     - name: Publish Docker Image
       run: docker push vamsibujji/springboot-cicd:latest
